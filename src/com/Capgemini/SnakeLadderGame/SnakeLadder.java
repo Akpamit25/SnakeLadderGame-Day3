@@ -13,9 +13,15 @@ public class SnakeLadder {
 		SnakeLadder sl = new SnakeLadder();
   	  	System.out.println("Welcome to this Snake & Ladder Game");
   	  	System.out.println("Let's Roll The Dice");
-  	  	numberOnDice = (int)(Math.random()*7);
+  	  	while(playerPosition <=100) {
+  	  	numberOnDice = (int)(Math.random()*7) + 1;;
   	  	System.out.println("Number On Dice After Rolling :"+numberOnDice);
   	  	sl.checkOption();
+  	  	if(playerPosition < 0)
+  	  	{
+  	  		playerPosition = 0;
+  	  	}
+	}
 	}
 	
 	public void checkOption()
